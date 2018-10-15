@@ -1,0 +1,5 @@
+{
+  "dbURL": "<mongo-db-url>",
+  "mqttUrl": "<url>",
+  "mqttTopic": "<topic>"
+}
