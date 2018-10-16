@@ -1,0 +1,4 @@
+{
+    "mqttUrl": "ws://localhost:1884",
+    "mqttTopic": "unibo/qasys"
+  }

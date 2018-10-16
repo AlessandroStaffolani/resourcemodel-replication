@@ -4,6 +4,7 @@ const Actuator = require('../model/actuator');
 const Executor = require('../model/executor');
 const ExecutorAction = require('../model/executorAction');
 const config = require('../config/config');
+const resourceModelAction = require('./actions');
 
 const init = () => {
     ResourceModel.find()
@@ -19,7 +20,7 @@ const init = () => {
                         //populateActuatorsPromise,
                         //populateExecutorsPromise
                     ]).then(results => {
-                        resourceModelActions.get_resource_model().then(resourceModel => {
+                        resourceModelAction.get_resource_model().then(resourceModel => {
                             console.log(resourceModel);
                         });
                     });
@@ -231,7 +232,7 @@ generate_executors_real_actuators = () => {
 };
 
 const add_array_of_object = (arrayObjectPromise, field) => {
-    arrayObjectPromise.push(get_resource_model(false));
+    arrayObjectPromise.push(resourceModelAction.get_resource_model(false));
     return Promise.all(arrayObjectPromise)
         .then(results => {
             let resourceModel = results[results.length - 1];

@@ -5,7 +5,7 @@
   "author": "Alessandro Staffolani <https://github.com/ale8193>",
   "license": "MIT",
   "scripts": {
-    "server": "node ./bin/server.js",
+    "server": "NODE_ENV=production node ./bin/server.js",
     "dev": "nodemon ./bin/server.js"
   },
   "dependencies": {

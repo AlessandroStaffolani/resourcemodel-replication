@@ -56,21 +56,21 @@ QActor temperature context ctxSensors /*-pubsub*/ {
 		// Events should be sent as mqtt event, but QA on same ctx can't share mqtt connection because use singleton class
 		// So I prefer to use mqtt only on controller QA because it has to send information outside (node)
 		emit resourceChangeEvt : resource( sensor, temperature, cityTemperature, 14 );
-		delay 2000;
+		delay 3000;
 		emit resourceChangeEvt : resource( sensor, temperature, cityTemperature, 16 );
-		delay 2000;
+		delay 3000;
 		emit resourceChangeEvt : resource( sensor, temperature, cityTemperature, 18 );
-		delay 2000;
+		delay 3000;
 		emit resourceChangeEvt : resource( sensor, temperature, cityTemperature, 20 );
-		delay 2000;
+		delay 3000;
 		emit resourceChangeEvt : resource( sensor, temperature, cityTemperature, 22 );
-		delay 2000;
+		delay 3000;
 		emit resourceChangeEvt : resource( sensor, temperature, cityTemperature, 24 );
-		delay 2000;
+		delay 3000;
 		emit resourceChangeEvt : resource( sensor, temperature, cityTemperature, 26 );
-		delay 2000;
+		delay 3000;
 		emit resourceChangeEvt : resource( sensor, temperature, cityTemperature, 16 );
-		delay 2000;
+		delay 3000;
 		emit resourceChangeEvt : resource( sensor, temperature, cityTemperature, 14 )
 	]
 }

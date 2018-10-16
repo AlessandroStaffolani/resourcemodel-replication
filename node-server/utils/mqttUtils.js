@@ -18,7 +18,6 @@ client.on('message', function(topic, message) {
     if (messageObject['msgID'] === 'updateModelMsg') {
         payloadObject = getPayloadAsObject(messageObject['payload']);
         if (payloadObject['type'] === 'sensor') {
-            console.log(payloadObject);
             resourceModelActions.update_resource(payloadObject['type'], payloadObject['name'], { value: payloadObject['value'] })
                 .then(updatedResource => {
                     let message = 'msg(modelUpdatedMsg,dispatch,node,react,modelUpdatedMsg(true),1)';

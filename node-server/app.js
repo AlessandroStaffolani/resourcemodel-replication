@@ -85,8 +85,10 @@ ResourceModelAction.init(); // It's executed once
  *Routes
  */
 const index = require('./routes/api/index');
+const resourcemodel = require('./routes/api/resourcemodel');
 
 app.use('/', index);
+app.use('/api/resource', resourcemodel);
 
 //==============================================================================
 
