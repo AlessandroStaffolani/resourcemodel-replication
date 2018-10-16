@@ -79,55 +79,55 @@ public abstract class AbstractTemperature extends QActor {
 	    	aar = delayReactive(5000,"" , "");
 	    	if( aar.getInterrupted() ) curPlanInExec   = "init";
 	    	if( ! aar.getGoon() ) return ;
-	    	temporaryStr = QActorUtils.unifyMsgContent(pengine, "resource(TYPE,VALUE)","resource(temperature,14)", guardVars ).toString();
+	    	temporaryStr = QActorUtils.unifyMsgContent(pengine, "resource(TYPE,CATEG,NAME,VALUE)","resource(sensor,temperature,cityTemperature,14)", guardVars ).toString();
 	    	emit( "resourceChangeEvt", temporaryStr );
 	    	//delay  ( no more reactive within a plan)
 	    	aar = delayReactive(2000,"" , "");
 	    	if( aar.getInterrupted() ) curPlanInExec   = "init";
 	    	if( ! aar.getGoon() ) return ;
-	    	temporaryStr = QActorUtils.unifyMsgContent(pengine, "resource(TYPE,VALUE)","resource(temperature,16)", guardVars ).toString();
+	    	temporaryStr = QActorUtils.unifyMsgContent(pengine, "resource(TYPE,CATEG,NAME,VALUE)","resource(sensor,temperature,cityTemperature,16)", guardVars ).toString();
 	    	emit( "resourceChangeEvt", temporaryStr );
 	    	//delay  ( no more reactive within a plan)
 	    	aar = delayReactive(2000,"" , "");
 	    	if( aar.getInterrupted() ) curPlanInExec   = "init";
 	    	if( ! aar.getGoon() ) return ;
-	    	temporaryStr = QActorUtils.unifyMsgContent(pengine, "resource(TYPE,VALUE)","resource(temperature,18)", guardVars ).toString();
+	    	temporaryStr = QActorUtils.unifyMsgContent(pengine, "resource(TYPE,CATEG,NAME,VALUE)","resource(sensor,temperature,cityTemperature,18)", guardVars ).toString();
 	    	emit( "resourceChangeEvt", temporaryStr );
 	    	//delay  ( no more reactive within a plan)
 	    	aar = delayReactive(2000,"" , "");
 	    	if( aar.getInterrupted() ) curPlanInExec   = "init";
 	    	if( ! aar.getGoon() ) return ;
-	    	temporaryStr = QActorUtils.unifyMsgContent(pengine, "resource(TYPE,VALUE)","resource(temperature,20)", guardVars ).toString();
+	    	temporaryStr = QActorUtils.unifyMsgContent(pengine, "resource(TYPE,CATEG,NAME,VALUE)","resource(sensor,temperature,cityTemperature,20)", guardVars ).toString();
 	    	emit( "resourceChangeEvt", temporaryStr );
 	    	//delay  ( no more reactive within a plan)
 	    	aar = delayReactive(2000,"" , "");
 	    	if( aar.getInterrupted() ) curPlanInExec   = "init";
 	    	if( ! aar.getGoon() ) return ;
-	    	temporaryStr = QActorUtils.unifyMsgContent(pengine, "resource(TYPE,VALUE)","resource(temperature,22)", guardVars ).toString();
+	    	temporaryStr = QActorUtils.unifyMsgContent(pengine, "resource(TYPE,CATEG,NAME,VALUE)","resource(sensor,temperature,cityTemperature,22)", guardVars ).toString();
 	    	emit( "resourceChangeEvt", temporaryStr );
 	    	//delay  ( no more reactive within a plan)
 	    	aar = delayReactive(2000,"" , "");
 	    	if( aar.getInterrupted() ) curPlanInExec   = "init";
 	    	if( ! aar.getGoon() ) return ;
-	    	temporaryStr = QActorUtils.unifyMsgContent(pengine, "resource(TYPE,VALUE)","resource(temperature,24)", guardVars ).toString();
+	    	temporaryStr = QActorUtils.unifyMsgContent(pengine, "resource(TYPE,CATEG,NAME,VALUE)","resource(sensor,temperature,cityTemperature,24)", guardVars ).toString();
 	    	emit( "resourceChangeEvt", temporaryStr );
 	    	//delay  ( no more reactive within a plan)
 	    	aar = delayReactive(2000,"" , "");
 	    	if( aar.getInterrupted() ) curPlanInExec   = "init";
 	    	if( ! aar.getGoon() ) return ;
-	    	temporaryStr = QActorUtils.unifyMsgContent(pengine, "resource(TYPE,VALUE)","resource(temperature,26)", guardVars ).toString();
+	    	temporaryStr = QActorUtils.unifyMsgContent(pengine, "resource(TYPE,CATEG,NAME,VALUE)","resource(sensor,temperature,cityTemperature,26)", guardVars ).toString();
 	    	emit( "resourceChangeEvt", temporaryStr );
 	    	//delay  ( no more reactive within a plan)
 	    	aar = delayReactive(2000,"" , "");
 	    	if( aar.getInterrupted() ) curPlanInExec   = "init";
 	    	if( ! aar.getGoon() ) return ;
-	    	temporaryStr = QActorUtils.unifyMsgContent(pengine, "resource(TYPE,VALUE)","resource(temperature,16)", guardVars ).toString();
+	    	temporaryStr = QActorUtils.unifyMsgContent(pengine, "resource(TYPE,CATEG,NAME,VALUE)","resource(sensor,temperature,cityTemperature,16)", guardVars ).toString();
 	    	emit( "resourceChangeEvt", temporaryStr );
 	    	//delay  ( no more reactive within a plan)
 	    	aar = delayReactive(2000,"" , "");
 	    	if( aar.getInterrupted() ) curPlanInExec   = "init";
 	    	if( ! aar.getGoon() ) return ;
-	    	temporaryStr = QActorUtils.unifyMsgContent(pengine, "resource(TYPE,VALUE)","resource(temperature,14)", guardVars ).toString();
+	    	temporaryStr = QActorUtils.unifyMsgContent(pengine, "resource(TYPE,CATEG,NAME,VALUE)","resource(sensor,temperature,cityTemperature,14)", guardVars ).toString();
 	    	emit( "resourceChangeEvt", temporaryStr );
 	    	repeatPlanNoTransition(pr,myselfName,"temperature_"+myselfName,false,false);
 	    }catch(Exception e_init){  

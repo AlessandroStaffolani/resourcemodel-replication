@@ -114,14 +114,14 @@ public abstract class AbstractController extends QActor {
 	    	printCurrentMessage(false);
 	    	//onMsg 
 	    	setCurrentMsgFromStore(); 
-	    	curT = Term.createTerm("resource(TYPE,VALUE)");
+	    	curT = Term.createTerm("resource(TYPE,CATEG,NAME,VALUE)");
 	    	if( currentMessage != null && currentMessage.msgId().equals("updateResourceMsg") && 
-	    		pengine.unify(curT, Term.createTerm("resource(TYPE,VALUE)")) && 
+	    		pengine.unify(curT, Term.createTerm("resource(TYPE,CATEG,NAME,VALUE)")) && 
 	    		pengine.unify(curT, Term.createTerm( currentMessage.msgContent() ) )){ 
-	    		String parg = "resource(TYPE,VALUE)";
+	    		String parg = "resource(TYPE,CATEG,NAME,VALUE)";
 	    		/* PublishMsgMove */
-	    		parg =  updateVars( Term.createTerm("resource(TYPE,VALUE)"), 
-	    		                    Term.createTerm("resource(TYPE,VALUE)"), 
+	    		parg =  updateVars( Term.createTerm("resource(TYPE,CATEG,NAME,VALUE)"), 
+	    		                    Term.createTerm("resource(TYPE,CATEG,NAME,VALUE)"), 
 	    			    		  	Term.createTerm(currentMessage.msgContent()), parg);
 	    		if( parg != null ) sendMsgMqtt(  "unibo/qasys", "updateModelMsg", "node", parg );
 	    	}

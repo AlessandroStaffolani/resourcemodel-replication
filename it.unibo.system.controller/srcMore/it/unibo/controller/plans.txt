@@ -1,5 +1,5 @@
 plan(1,init, sentence(true,delay( 500) ,'','' ))
 plan(2,init, sentence(true,move(print("Init Controller")),'','' ))
 plan(1,handleUpdateResource, sentence(true,printCurrentMessage(''),'','' ))
-plan(2,handleUpdateResource, sentence(true,msgswitch(updateResourceMsg, resource( TYPE,VALUE) , not here StateMoveNormal),'','' ))
+plan(2,handleUpdateResource, sentence(true,msgswitch(updateResourceMsg, resource( TYPE,CATEG,NAME,VALUE) , not here StateMoveNormal),'','' ))
 plan(3,handleUpdateResource, sentence(true,move(resumeplan),'','' ))

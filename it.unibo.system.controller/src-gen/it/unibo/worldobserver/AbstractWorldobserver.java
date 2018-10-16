@@ -112,14 +112,14 @@ public abstract class AbstractWorldobserver extends QActor {
 	    	printCurrentEvent(false);
 	    	//onEvent 
 	    	setCurrentMsgFromStore(); 
-	    	curT = Term.createTerm("resource(TYPE,VALUE)");
+	    	curT = Term.createTerm("resource(TYPE,CATEG,NAME,VALUE)");
 	    	if( currentEvent != null && currentEvent.getEventId().equals("resourceChangeEvt") && 
-	    		pengine.unify(curT, Term.createTerm("resource(TYPE,VALUE)")) && 
+	    		pengine.unify(curT, Term.createTerm("resource(TYPE,CATEG,NAME,VALUE)")) && 
 	    		pengine.unify(curT, Term.createTerm( currentEvent.getMsg() ) )){ 
-	    			String parg="changeModelItem(TYPE,VALUE)";
+	    			String parg="changeModelItem(CATEG,NAME,VALUE)";
 	    			/* PHead */
-	    			parg =  updateVars( Term.createTerm("resource(TYPE,VALUE)"), 
-	    			                    Term.createTerm("resource(TYPE,VALUE)"), 
+	    			parg =  updateVars( Term.createTerm("resource(TYPE,CATEG,NAME,VALUE)"), 
+	    			                    Term.createTerm("resource(TYPE,CATEG,NAME,VALUE)"), 
 	    				    		  	Term.createTerm(currentEvent.getMsg()), parg);
 	    				if( parg != null ) {
 	    				    aar = QActorUtils.solveGoal(this,myCtx,pengine,parg,"",outEnvView,86400000);

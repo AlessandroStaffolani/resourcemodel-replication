@@ -73,10 +73,11 @@ const clientMqtt = require('./utils/mqttUtils');
 //==============================================================================
 
 /**
- * Testing
+ * Init resource model
  */
 
-//const testResourceModel = require('./test/resourceModel');
+const ResourceModelAction = require('./model-actions/init');
+ResourceModelAction.init(); // It's executed once
 
 //==============================================================================
 
