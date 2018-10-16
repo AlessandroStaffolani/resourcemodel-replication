@@ -3,22 +3,22 @@
 resourceModel.pl
 ===============================================================
 */
-model( type(temperature), value(0) ). 
+model( type(sensor, temperature), name(cityTemperature), value(0) ). 
 
-getModelItem( TYPE, VALUE ) :-
-		model( type(TYPE), value(VALUE) ).
+getModelItem( TYPE, CATEG, NAME, VALUE ) :-
+		model( type(TYPE, CATEG), name(NAME), value(VALUE) ).
 
-changeModelItem( TYPE, VALUE ) :-
+changeModelItem( CATEG, NAME, VALUE ) :-
  		replaceRule( 
-			model( type(TYPE), value(_) ),  
-			model( type(TYPE), value(VALUE) ) 		
+			model( type(TYPE, CATEG), name(NAME), value(_) ),  
+			model( type(TYPE, CATEG), name(NAME), value(VALUE) ) 		
 		),!,
 		%%output( changedModelAction(CATEG, NAME, VALUE) ),
-		( changedModelAction(TYPE, VALUE) %%to be defined by the appl designer
+		( changedModelAction(CATEG, NAME, VALUE) %%to be defined by the appl designer
 		  ; true ).	
 		  
-changedModelAction( temperature, V) :- 
-		sendMsg( controller, updateResourceMsg, resource( temperature, V ) ). 
+changedModelAction( temperature, NAME, V) :- 
+		sendMsg( controller, updateResourceMsg, resource( sensor, temperature, NAME, V ) ). 
 		
 %%%  initialize
 initResourceTheory :- output("initializing the initResourceTheory ...").

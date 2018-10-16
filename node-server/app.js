@@ -73,10 +73,11 @@ const clientMqtt = require('./utils/mqttUtils');
 //==============================================================================
 
 /**
- * Testing
+ * Init resource model
  */
 
-//const testResourceModel = require('./test/resourceModel');
+const ResourceModelAction = require('./model-actions/init');
+ResourceModelAction.init(); // It's executed once
 
 //==============================================================================
 
@@ -84,8 +85,10 @@ const clientMqtt = require('./utils/mqttUtils');
  *Routes
  */
 const index = require('./routes/api/index');
+const resourcemodel = require('./routes/api/resourcemodel');
 
 app.use('/', index);
+app.use('/api/resource', resourcemodel);
 
 //==============================================================================
 

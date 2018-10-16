@@ -1,5 +1,5 @@
 {
-  "dbURL": "<mongo-db-url>",
-  "mqttUrl": "<url>",
-  "mqttTopic": "<topic>"
+  "dbURL": "mongodb://<mongo_host>:<mongo_port>/<db_name>", // For example mongodb://localhost:27017/model-db
+  "mqttUrl": "ws://your_host:1884", // For example ws://localhost:1884
+  "mqttTopic": "<topic>" // For example unibo/qasys
 }

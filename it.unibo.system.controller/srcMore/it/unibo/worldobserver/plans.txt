@@ -1,5 +1,5 @@
 plan(1,init, sentence(true,move(solve,consult( "./resourceModel.pl"),0,""),'','' ))
 plan(2,init, sentence(true,move(print("Init World Observer")),'','' ))
 plan(1,handleResourceChange, sentence(true,printCurrentEvent(false),'','' ))
-plan(2,handleResourceChange, sentence(true,eventswitch(resourceChangeEvt, Â»resource( TYPE,VALUE), move(solve,changeModelItem( TYPE,VALUE),0,"") ),'','' ))
+plan(2,handleResourceChange, sentence(true,eventswitch(resourceChangeEvt, Â»resource( TYPE,CATEG,NAME,VALUE), move(solve,changeModelItem( CATEG,NAME,VALUE),0,"") ),'','' ))
 plan(3,handleResourceChange, sentence(true,move(resumeplan),'','' ))
