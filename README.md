@@ -1,6 +1,10 @@
 # ResourceModel Replication
 Distributed system that shows how to replicate resource model through different microservice
 
+### System structure
+
+![alt text](https://github.com/ale8193/resourcemodel-replication/blob/master/system-for-resourcemodel-replication.png "System structure")
+
 ### Enviroment
 
 To run this application:
