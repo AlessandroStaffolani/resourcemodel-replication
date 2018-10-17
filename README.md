@@ -9,7 +9,7 @@ Distributed system that shows how to replicate resource model through different 
 
 To run this application:
 
-- you need to have a `mongodb` database you will setup db url in configuration files
+- you need to have a `mongodb` database, you will setup db url in configuration files
 - you need an `MQTT` broker available for `websocket` on port `1884`, if you need to setup `websocket` follow this link [mqtt enable websocket](https://blog.ithasu.org/2016/05/enabling-and-using-websockets-on-mosquitto/).
 
 ### Installation
